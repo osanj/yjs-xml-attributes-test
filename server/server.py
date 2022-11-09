@@ -25,7 +25,7 @@ class WebsocketServerWithDefaultDoc(WebsocketServer):
 
 async def server(host: str = "localhost", port: int = 9999):
     print(f"starting server on {host}:{port} ...")
-    websocket_server = WebsocketServer()
+    websocket_server = WebsocketServerWithDefaultDoc()
     async with serve(websocket_server.serve, host, port):
         await asyncio.Future()  # run forever
 
