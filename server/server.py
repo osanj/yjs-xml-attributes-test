@@ -14,9 +14,9 @@ class WebsocketServerWithDefaultDoc(WebsocketServer):
             xml = doc.get_xml_element("root")
             with doc.begin_transaction() as txn:
                 item = xml.push_xml_element(txn, "item")
-                item.set_attribute(txn, "attr1", "1")
-                item.set_attribute(txn, "attr2", "12")
-                item.set_attribute(txn, "attr3", "123")
+                item.set_attribute(txn, "attr1", "a")
+                item.set_attribute(txn, "attr2", "bc")
+                item.set_attribute(txn, "attr3", "def")
             print(f"initialized room '{path}' with following xml: {xml}")
 
             self.rooms[path] = room
